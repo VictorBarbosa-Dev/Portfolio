@@ -68,12 +68,13 @@ body.dark-mode .footer {
 
 .nav-bar {
     flex-direction: row;
-    height: 50px;
+    padding: 0;
     justify-content: space-between;
     align-items: center;
     position: fixed;
     top: 0;
     margin: 0;
+    z-index: 100;
 }
 
 .header-sections {
@@ -150,6 +151,7 @@ body.dark-mode .section-button:focus {
     cursor: pointer;
     font-size: var(--toggle-size);
     margin-right: 1rem;
+    flex: 0 0 auto;
 }
 
 .theme-checkbox::before {
@@ -244,44 +246,51 @@ body.dark-mode .projects-card {
 }
 
 .card {
+    position: relative;
     width: 400px;
     height: 200px;
     background: rgb(255, 255, 255);
     border-radius: 0.4em;
-    transition: border 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    border: rgb(250, 250, 250) 0.2em solid;
+    border: 0.2em solid rgb(250, 250, 250);
+    transition: border 0.3s ease, transform 0.3s ease;
+    overflow: hidden;
 }
 
 .card:hover {
-    border: black 0.2em solid;
-    scale: 1.05;
+    border-color: black;
+    transform: scale(1.05);
 }
 
-
 .card-image {
-    background-image: url('../images/project1.png');
-    background-position: center;
-    background-size: 100%;
-    background-repeat: no-repeat;
     width: 100%;
     height: 100%;
+    background-image: url('../images/project1.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: filter 0.3s ease;
 }
 
 .card:hover .card-image {
     filter: blur(3px);
 }
 
-.card:hover .card-description {
-    display: block;
-}
-
 .card-description {
     position: absolute;
+    top: 0;
     width: 100%;
     height: 100%;
-    margin: 0;
-    top: 0;
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.card:hover .card-description {
+    opacity: 1;
+    visibility: visible;
 }
 
 .card-description .description {
@@ -289,9 +298,11 @@ body.dark-mode .projects-card {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     background-color: rgba(255, 255, 255, 0.75);
+    text-align: center;
+    padding: 1em;
 }
 
 .card-description .description p {
@@ -334,3 +345,29 @@ span.website {
     background: url("../images/website.png") no-repeat center center;
     background-size: 100%;
 }
+
+.stacks-card {
+    background-color: rgba(255, 255, 255, 0.75);
+    width: 75vw;
+}
+
+body.dark-mode .stacks-card {
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+}
+
+.stacks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+span.stack {
+    display: inline-block;
+    width: 75px;
+    height: 75px;
+    background: no-repeat center/cover;
+    background-image: var(--image);
+}
+
