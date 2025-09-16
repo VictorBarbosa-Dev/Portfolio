@@ -1,12 +1,11 @@
 import Particles from "./Animation/Particles.js";
-import UtilBuilder from "./Util/UtilBuilder.js";
+import Builder from "./Builder/Builder.js";
 
-document.addEventListener("DOMContentLoaded", () => {
-
-    const BackGround = new Particles(document.getElementById("particles"));
-    const Builder = new UtilBuilder();
+document.addEventListener("DOMContentLoaded", async () => {
     
-//    Builder.build();
-    Builder.initThemeController();
+    const BackGround = new Particles(document.getElementById("particles"));
+    const builder = await Builder.load();
+
+    builder.build();
     BackGround.animate();
 });

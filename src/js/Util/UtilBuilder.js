@@ -1,4 +1,8 @@
 export default class UtilBuilder {
+        
+    constructor(config) {
+        this.config = config;
+    }
 
     initThemeController() {
 
@@ -18,5 +22,29 @@ export default class UtilBuilder {
                 document.body.classList.remove("dark-mode");
             }
         });
+    }
+    
+    buildNavBar() {
+        
+    }
+    
+    buildSections() {
+        
+    }
+    
+    _buildSectionBegin() {
+        
+    }
+    
+    _buildSectionAbout() {
+        
+    }
+    
+    _buildSectionProjects() {
+        
+    }
+    
+    _buildSectionStacks() {
+        
     }
 }
