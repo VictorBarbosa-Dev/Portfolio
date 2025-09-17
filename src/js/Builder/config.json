@@ -15,7 +15,7 @@
             "projects": [
                 {
                     "image": "project1.png",
-                    "description": "Portf�lio criado com HTML, CSS e Js com componente de constru��o dinamica.",
+                    "description": "Portfolio criado com HTML, CSS e Js com componente de construção dinamica.",
                     "viewMethods": {
                         "website": "https://victorbarbosa-dev.github.io/Portfolio/",
                         "github": "https://github.com/VictorBarbosa-Dev/Portfolio"
@@ -26,8 +26,18 @@
         "stacks": {
             "title": "Tecnologias",
             "stacks": [
+                "HTML5",
+                "CSS3",
+                "JavaScript",
+                "Cypress",
+                "Bootstrap",
                 "PHP",
-                "CakePHP"
+                "Laravel",
+                "CakePHP",
+                "Python",
+                "Java",
+                "MySQL",
+                "PostgresSQL"
             ]
         }
     }
