@@ -3,7 +3,7 @@
         "begin": {
             "title": "Inicio",
             "hero": "hero.jpg",
-            "legend": "Sit adipisicing exercitation duis dolor dolor ex. Duis nulla mollit excepteur quis commodo anim commodo. Enim magna Lorem sint commodo.",
+            "legend": "Desenvolvedor Web Back-End buscando sempre evoluir e aprender novas tecnologias para criar soluÃ§Ãµes eficientes e inovadoras para tornar o mundo um lugar melhor.",
             "href": "https://github.com/VictorBarbosa-Dev"
         },
         "about": {
@@ -15,7 +15,7 @@
             "projects": [
                 {
                     "image": "project1.png",
-                    "description": "Portfólio criado com HTML, CSS e Js com componente de construção dinamica.",
+                    "description": "Portfï¿½lio criado com HTML, CSS e Js com componente de construï¿½ï¿½o dinamica.",
                     "viewMethods": {
                         "website": "https://victorbarbosa-dev.github.io/Portfolio/",
                         "github": "https://github.com/VictorBarbosa-Dev/Portfolio"

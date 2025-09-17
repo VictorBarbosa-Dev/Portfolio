@@ -21,9 +21,9 @@ export default class Builder {
     build() {
         
         const utilBuilder = new UtilBuilder(this.config);
-        
-        console.log(this.config);
-        
+                
+        utilBuilder.buildNavBar();
+        utilBuilder.buildContentSections();
         utilBuilder.initThemeController();
     }
 }
