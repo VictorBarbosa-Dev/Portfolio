@@ -250,14 +250,21 @@ export default class UtilBuilder {
         
         this.config.sections.stacks.stacks.forEach(stack => {
             
+            let _stack = document.createElement("span");
+            _stack.classList.add("stack");
+            _stack.alt = stack;
+            _stack.title = stack;
+            
             let stackIcon = document.createElement("span");
-            stackIcon.classList.add("stack");
+            stackIcon.classList.add("stack-icon");
+            stackIcon.style.setProperty("--image", "url(" + this.images + stack + ".png)");
             
-            const path = "url(" + this.images + stack + ".png)";
+            let stackName = document.createElement("span");
+            stackName.textContent = stack;
             
-            stackIcon.style.setProperty("--image", path);
-            
-            stacks.appendChild(stackIcon);
+            _stack.appendChild(stackIcon);
+            _stack.appendChild(stackName);
+            stacks.appendChild(_stack);
         })
                 
         close.textContent = "</" + this.config.sections.stacks.title + ">";

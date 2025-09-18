@@ -79,7 +79,7 @@ body.dark-mode .footer {
 
 .header-sections {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
     gap: 3px;
 }
@@ -304,7 +304,6 @@ body.dark-mode .projects-card {
     align-items: center;
     background-color: rgba(255, 255, 255, 0.75);
     text-align: center;
-    padding: 1em;
 }
 
 .card-description .description p {
@@ -363,14 +362,90 @@ body.dark-mode .stacks-card {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    margin-left: 15vw;
+    margin-right: 15vw;
     gap: 30px;
 }
 
 span.stack {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+span.stack .stack-icon {
     width: 75px;
     height: 75px;
     background: no-repeat center/cover;
     background-image: var(--image);
 }
 
+@media (max-width: 780px) {
+
+    h2 {
+        font-size: 14px;
+    }
+
+    p {
+        font-size: 12px;
+        text-indent: 25px;
+    }
+
+    .header-sections {
+        display: none;
+    }
+
+    .begin-card {
+        padding: 2vw;
+        width: 75vw;
+        border-top-left-radius: 37.5vw;
+        border-top-right-radius: 37.5vw;
+    }
+
+    .hero {
+        width: 70vw;
+        height: 70vw;
+    }
+
+    .about-card {
+        width: 90vw;
+    }
+
+    .projects-card {
+        width: 90vw;
+    }
+
+    .projects {
+        gap: 3px;
+    }
+
+    .card {
+        width: 200px;
+        height: 100px;
+    }
+
+    span.github {
+        width: 15px;
+        height: 15px;
+    }
+
+    span.website {
+        width: 15px;
+        height: 15px;
+    }
+
+    .stacks-card {
+        width: 90vw;
+    }
+
+    .stacks {
+        margin-left: 15vw;
+        margin-right: 15vw;
+        gap: 30px;
+    }
+
+    span.stack .stack-icon {
+        width: 50px;
+        height: 50px;
+    }
+}
