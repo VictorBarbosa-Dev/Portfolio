@@ -398,6 +398,10 @@ span.stack .stack-icon {
 
 @media (max-width: 780px) {
 
+    section {
+        scroll-margin-top: 10vh;
+    }
+
     p {
         font-size: 14px;
         text-indent: 30px;
