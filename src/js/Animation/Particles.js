@@ -76,7 +76,7 @@ export default class Particles {
         this.config.particles.radius = Math.max(2, 2.5 * scale);
         this.config.particles.connectDistance = Math.min(150, 100 * scale);
         
-        this.config.mouse.repulsionRadius = 100 * scale;
+        this.config.mouse.repulsionRadius = Math.min(this.config.mouse.repulsionRadius, 100 * scale);
 
         this.particles = Array.from(
             { length: this.config.particles.num },
