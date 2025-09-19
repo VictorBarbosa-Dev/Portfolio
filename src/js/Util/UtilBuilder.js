@@ -35,6 +35,7 @@ export default class UtilBuilder {
         navBar.appendChild(this._buildThemeController());
 
         document.querySelector(".content").appendChild(navBar);
+        document.querySelector(".content").appendChild(this._buildMobileSections());
     }
 
     _buildOpenPage() {
@@ -56,19 +57,36 @@ export default class UtilBuilder {
         headerSections.classList.add("header-sections");
 
         Object.keys(this.config.sections).forEach(section => {
-
-            let a = document.createElement("a");
-            a.href = '#' + section;
-
-            let button = document.createElement("button");
-            button.classList.add('section-button');
-            button.textContent = this.config.sections[section].title;
-
-            a.appendChild(button);
-            headerSections.appendChild(a);
+            headerSections.appendChild(this._buildSectionButton(section));
         });
 
         return headerSections;
+    }
+    
+    _buildMobileSections() {
+        
+        let mobileSections = document.createElement("div");
+        mobileSections.classList.add("mobile-sections");
+
+        Object.keys(this.config.sections).forEach(section => {
+            mobileSections.appendChild(this._buildSectionButton(section));
+        });
+
+        return mobileSections;
+    }
+
+    _buildSectionButton(section) {
+
+        let a = document.createElement("a");
+        a.href = '#' + section;
+
+        let button = document.createElement("button");
+        button.classList.add('section-button');
+        button.textContent = this.config.sections[section].title;
+
+        a.appendChild(button);
+        
+        return a;
     }
 
     _buildThemeController() {
@@ -98,7 +116,7 @@ export default class UtilBuilder {
                 case "projects":
                     this._buildSectionProjects();
                     break;
-                    
+
                 case "stacks":
                     this._buildSectionStacks();
                     break;
@@ -169,7 +187,7 @@ export default class UtilBuilder {
         let open = document.createElement("h2");
         let projects = document.createElement("div");
         let close = document.createElement("h2");
-        
+
         open.textContent = "<" + this.config.sections.projects.title + ">";
         close.textContent = "</" + this.config.sections.projects.title + ">";
 
@@ -198,81 +216,81 @@ export default class UtilBuilder {
             viewMethods.classList.add("view-methods");
 
             Object.entries(project.viewMethods).forEach(([viewMethod, url]) => {
-                
+
                 let a = document.createElement("a");
                 a.classList.add("view-method");
                 a.href = url;
-                
+
                 let icon = document.createElement("span");
                 icon.classList.add(viewMethod.toLowerCase());
-                
+
                 let nameMethod = document.createElement("span");
                 nameMethod.textContent = viewMethod;
-                
+
                 a.appendChild(icon);
                 a.appendChild(nameMethod);
-                
+
                 viewMethods.appendChild(a);
             });
-            
+
             description.appendChild(p);
             description.appendChild(viewMethods);
             cardDescription.appendChild(description);
-            
+
             card.appendChild(cardImage);
             card.appendChild(cardDescription);
-            
+
             projects.appendChild(card);
         });
-        
+
         div.appendChild(open);
         div.appendChild(projects);
         div.appendChild(close);
-        
+
         section.appendChild(div);
         document.querySelector(".content").appendChild(section);
     }
 
     _buildSectionStacks() {
-        
+
         let section = document.createElement("section");
         section.id = "stacks";
-        
+
         let card = document.createElement("div");
         card.classList.add("stacks-card");
-        
+
         let open = document.createElement("h2");
         let stacks = document.createElement("div");
         let close = document.createElement("h2");
-        
+
         open.textContent = "<" + this.config.sections.stacks.title + ">";
         stacks.classList.add("stacks");
-        
+
         this.config.sections.stacks.stacks.forEach(stack => {
-            
+
             let _stack = document.createElement("span");
             _stack.classList.add("stack");
             _stack.alt = stack;
             _stack.title = stack;
-            
+
             let stackIcon = document.createElement("span");
             stackIcon.classList.add("stack-icon");
             stackIcon.style.setProperty("--image", "url(" + this.images + stack + ".png)");
-            
+
             let stackName = document.createElement("span");
             stackName.textContent = stack;
-            
+
             _stack.appendChild(stackIcon);
             _stack.appendChild(stackName);
             stacks.appendChild(_stack);
         })
-                
+
         close.textContent = "</" + this.config.sections.stacks.title + ">";
-        
+
         card.appendChild(open);
         card.appendChild(stacks);
         card.appendChild(close);
-        
+
         section.appendChild(card);
         document.querySelector(".content").appendChild(section);
     }
