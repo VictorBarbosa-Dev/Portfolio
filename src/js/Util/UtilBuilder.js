@@ -205,6 +205,10 @@ export default class UtilBuilder {
 
             const path = "url(" + this.images + project.image + ")";
             cardImage.style.setProperty("--image", path);
+            
+            if (project.image == "coding.png") {
+                cardImage.style.backgroundSize = "50%";
+            }
 
             let description = document.createElement("div");
             description.classList.add("description");

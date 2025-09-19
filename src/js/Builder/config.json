@@ -1,24 +1,37 @@
 {
     "sections": {
         "begin": {
-            "title": "Inicio",
+            "title": "Início",
             "hero": "hero.jpg",
             "legend": "Desenvolvedor Web Back-End buscando sempre evoluir e aprender novas tecnologias para criar soluções eficientes e inovadoras para tornar o mundo um lugar melhor.",
             "href": "https://github.com/VictorBarbosa-Dev"
         },
         "about": {
             "title": "Sobre",
-            "about": "In aliqua officia reprehenderit officia reprehenderit occaecat pariatur. Ut occaecat in ad elit ex proident do occaecat irure voluptate ullamco exercitation duis.Quis nostrud incididunt in eu sunt dolore nostrud non sint Lorem sit incididunt cillum.Eu aute non tempor elit irure duis magna.Commodo commodo in elit nulla nisi non. Ut in consequat adipisicing sint id ullamco nostrud.Cupidatat deserunt incididunt laborum in commodo commodo id reprehenderit anim ut enim eiusmod."
+            "about": "Olá, me chamo Victor. Sou desenvolvedor back-end com mais de 4 anos de experiência. Tenho foco no desenvolvimento de soluções robustas e escaláveis, utilizando principalmente PHP (Laravel e CakePHP), Java e Python. Já atuei em projetos relevantes, incluindo duas entregas para o Senac, o que reforçou minha capacidade de alinhar demandas técnicas a necessidades reais de negócio. Busco constantemente aprimorar minhas habilidades e aplicar boas práticas de desenvolvimento para garantir qualidade, segurança e performance nas aplicações que construo."
         },
         "projects": {
             "title": "Projetos",
             "projects": [
                 {
-                    "image": "project1.png",
-                    "description": "Portfolio criado com HTML, CSS e Js com componente de construção dinamica.",
+                    "image": "senac.png",
+                    "description": "Projeto para o Senac: Sistema de reserva de salas para os professores.",
                     "viewMethods": {
-                        "website": "https://victorbarbosa-dev.github.io/Portfolio/",
-                        "github": "https://github.com/VictorBarbosa-Dev/Portfolio"
+                        "github": "https://github.com/VictorBarbosa-Dev/ReservasSenac"
+                    }
+                },
+                {
+                    "image": "senac.png",
+                    "description": "Projeto para o Senac: Sistema de chamado para a realização da manutenção nos computadores.",
+                    "viewMethods": {
+                        "github": "https://github.com/VictorBarbosa-Dev/ChamadosSenac"
+                    }
+                },
+                {
+                    "image": "coding.png",
+                    "description": "API de inteligência artificial com rede neural treinada para jogar truco Gaúcho/Uruguaio.",
+                    "viewMethods": {
+                        "github": "https://github.com/VictorBarbosa-Dev/TrucoMind"
                     }
                 }
             ]
